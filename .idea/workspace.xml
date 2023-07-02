@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="efa9a597-52db-4bd6-b931-7e9958dbc600" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/connection/ServerFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/ErrorsEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/ErrorsEnumForAlbums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/ErrorsEnumForSongs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/SendStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/function/Album.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/function/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/function/Path.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/function/PlayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/function/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/function/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mainFunction/AlbumPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mainFunction/ConOrCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mainFunction/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mainFunction/PlayListPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mainFunction/SongPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/object_error/AlbumVoError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/object_error/SongVoError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/AlbumsVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/ConnectionSongAlbumsVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/ConnectionSongPlayListVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/GmailVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/LoginVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/PasswordVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/PlayListVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/PlayListVOGet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/SongVOGet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/SongsVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/UserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/vo/UserVoPlusCode.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Rf7vSC6YNLz7Nd1EmsTpBaqyRo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/IdeaProjects/music_fly_client_scanners/src/main/java/org/example/enums&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\IdeaProjects\music_fly_client_scanners\src\main\java\org\example\enums" />
+      <recent name="C:\Users\user\IdeaProjects\music_fly_client_scanners\src\main\java\org\example\vo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.enums" />
+      <recent name="org.example.vo" />
+      <recent name="org.example.connection" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efa9a597-52db-4bd6-b931-7e9958dbc600" name="Changes" comment="" />
+      <created>1687629512544</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687629512544</updated>
+      <workItem from="1687629513992" duration="5297000" />
+      <workItem from="1687672159885" duration="5836000" />
+      <workItem from="1687685639794" duration="3551000" />
+      <workItem from="1687697233982" duration="2000000" />
+      <workItem from="1687760171148" duration="10243000" />
+      <workItem from="1687775906202" duration="2630000" />
+      <workItem from="1687934813378" duration="2604000" />
+      <workItem from="1687949640128" duration="6309000" />
+      <workItem from="1687960136549" duration="9742000" />
+      <workItem from="1688234565628" duration="1559000" />
+      <workItem from="1688236434690" duration="1046000" />
+      <workItem from="1688238677727" duration="3417000" />
+      <workItem from="1688312880925" duration="1843000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/function/Song.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/function/Album.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/mainFunction/SongPage.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/function/Song.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

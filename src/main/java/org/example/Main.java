@@ -11,5 +11,6 @@ public class Main {
         conOrCreate.ConOrCreate();
         new HomePage();
         new PlayListPage();
+        System.out.println();
     }
 }

@@ -15,8 +15,8 @@ import java.util.Scanner;
 public class User {
     private ServerFunction server=new ServerFunction();
     private static long userId;
-    private String addPath="http://localhost:8081/User/save";
-    private String getPath="http://localhost:8081/User/getUser";
+    private String addPath="http://192.168.1.22:8081/User/save";
+    private String getPath="http://192.168.1.22:8081/User/getUser";
     private ErrorsEnum creatUser(String name,String secName,String email,String phone,String userName,String birthDay){
         UserVo userVo=new UserVo();
         userVo.setUserName(userName);

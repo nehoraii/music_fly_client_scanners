@@ -119,18 +119,30 @@ public class SongPage {
                 case "RAN":
                         songFunction.random();
                     break;
+                case ">":
+                    songFunction.move(1);
+                    break;
+                case "<":
+                    songFunction.move(-1);
+                    break;
+                case "1":
+                    songFunction.showPropertySongPlay();
+                    break;
                 case"Q":
                     songFunction.stopSong();
+                    isPlay=false;
                     Path.delete("Song");
                     flag=false;
                     break;
                 default:
                     System.out.println("Wrong!!!");
             }
-            if(isPlay && (!songFunction.isFinish())){
+            songFunction.waiting();
+            if(isPlay && songFunction.isFinish()){
                 Path.delete("Song");
                 return;
             }
+            System.out.println(songFunction.isFinish());
         }while (flag);
     }
 }

@@ -16,10 +16,10 @@ import java.util.Scanner;
 
 public class PlayList {
     private ServerFunction server=new ServerFunction();
-    private String pathGetPlayListsByUserId="http://localhost:8080/PlayList/getPlayListByUserId";
-    private String pathAddPlayList="http://localhost:8080/PlayList/save";
-    private String pathDelPlayList="http://localhost:8080/PlayList/delete";
-    private String pathGetPlayListById="http://localhost:8080/PlayList/getPlayListByPlayListId";
+    private String pathGetPlayListsByUserId="http://192.168.1.22:8080/PlayList/getPlayListByUserId";
+    private String pathAddPlayList="http://192.168.1.22:8080/PlayList/save";
+    private String pathDelPlayList="http://192.168.1.22:8080/PlayList/delete";
+    private String pathGetPlayListById="http://192.168.1.22:8080/PlayList/getPlayListByPlayListId";
     private static List<PlayListVOGet> playListsUser;
 
     public static List<PlayListVOGet> getPlayListsUser() {
@@ -29,7 +29,7 @@ public class PlayList {
     private List<PlayListVOGet> getPlayListByUserId(long userId){
         PlayListVOGet playListVOGet=new PlayListVOGet();
         playListVOGet.setUserId(userId);
-        List<PlayListVOGet>list=new ArrayList<>();
+        List<PlayListVOGet>list;
         server.connect(pathGetPlayListsByUserId, SendStatusEnum.POST,playListVOGet);
         String answer;
         answer=server.getMassageHead();

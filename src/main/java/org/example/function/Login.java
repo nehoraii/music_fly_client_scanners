@@ -9,7 +9,7 @@ import org.example.vo.UserVo;
 import java.util.Scanner;
 
 public class Login {
-    private String addPath="http://localhost:8081/Login/save";
+    private String addPath="http://192.168.1.22:8081/Login/save";
     private ServerFunction server=new ServerFunction();
     private ErrorsEnum addLogin(String userName,String password){
         User userFunction=new User();

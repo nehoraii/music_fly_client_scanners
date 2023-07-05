@@ -16,5 +16,6 @@ public enum ErrorsEnum {
     MIN_VOLUME,
     FILE_NOT_EXIST,
     CANT_CONVERT,
-    MIN_VALUE
+    MIN_VALUE,
+    BAD_VAL
 }

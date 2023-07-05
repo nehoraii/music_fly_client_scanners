@@ -20,10 +20,11 @@ import java.io.IOException;
 import java.util.*;
 
 public class Album {
+    private String DNS="192.168.1.22";
     private ServerFunction server=new ServerFunction();
-    private String pathSaveAlbum="http://localhost:8080/Albums/save";
-    private String pathSaveSong="http://localhost:8080/Song/save";
-    private String pathToAddCon="http://localhost:8080/ConSongAlbum/save";
+    private String pathSaveAlbum="http://" + DNS + ":8080/Albums/save";
+    private String pathSaveSong="http://" + DNS + ":8080/Song/save";
+    private String pathToAddCon="http://" + DNS + ":8080/ConSongAlbum/save";
     public boolean addAlbumFront(){
         Scanner scanner=new Scanner(System.in);
         System.out.println("How many Song");
@@ -40,7 +41,7 @@ public class Album {
             System.out.println("Enter zaner Song: ");
             String zaner=scanner.nextLine();
             songVoError=addSong(nameSong,zaner,pathToSong,User.getUserId());
-           // lengthAlbum+=getAudioDurationInSeconds(songVoError.getSongsVO().getTheSong());
+            lengthAlbum+=getAudioDurationInSeconds(songVoError.getSongsVO().getTheSong());
             listIdSong.add(songVoError.getSongsVO().getId());
             }
         AlbumVoError albumVoError;
@@ -90,18 +91,18 @@ public class Album {
         con.setSongId(songId);
         server.connect(pathToAddCon,SendStatusEnum.POST,con);
     }
-    private SongVoError addSong(String nameSong,String zaner, String pathToFile,long userId){
-        SongVoError songVoError=new SongVoError();
-        SongsVO songsVO=new SongsVO();
-        File file=new File(pathToFile);
-        if(!file.exists()){
+    private SongVoError addSong(String nameSong,String zaner, String pathToFile,long userId) {
+        SongVoError songVoError = new SongVoError();
+        SongsVO songsVO = new SongsVO();
+        File file = new File(pathToFile);
+        if (!file.exists()) {
             songVoError.setE(ErrorsEnum.FILE_NOT_EXIST);
             return songVoError;
         }
         byte[] song;
         try {
-            song=FileUtils.readFileToByteArray(file);
-        }catch (Exception e){
+            song = FileUtils.readFileToByteArray(file);
+        } catch (Exception e) {
             System.out.println(e);
             songVoError.setE(ErrorsEnum.CANT_CONVERT);
             return songVoError;
@@ -111,12 +112,12 @@ public class Album {
         songsVO.setUserId(userId);
         songsVO.setZaner(zaner);
         songsVO.setTheSong(song);
-        server.connect(pathSaveSong,SendStatusEnum.POST,songsVO);
-        String answer=server.getMassageHead();
-        Gson gson=new Gson();
-        SongVOGet songVOGet=new SongVOGet();
-        songVOGet=gson.fromJson(answer,songVOGet.getClass());
-        copyProperty(songVOGet,songsVO);
+        server.connect(pathSaveSong, SendStatusEnum.POST, songsVO);
+        String answer = server.getMassageHead();
+        Gson gson = new Gson();
+        SongVOGet songVOGet = new SongVOGet();
+        songVOGet = gson.fromJson(answer, songVOGet.getClass());
+        copyProperty(songVOGet, songsVO);
         songVoError.setSongsVO(songsVO);
         songVoError.setE(ErrorsEnum.GOOD);
         return songVoError;

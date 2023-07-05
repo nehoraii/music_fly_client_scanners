@@ -26,8 +26,11 @@ public class Song {
     private boolean isNewSong=true;
     private int indexSongInPlayList=0;
     private List<SongVOGet> listSongMain;
-    private String pathGetSongsInPlayList="http://localhost:8080/PlayList/getPlayListByPlayListId";
-    private String pathGetSongById="http://localhost:8080/Song/getSongById";
+    private String DNS="192.168.1.22";
+    private String pathGetSongsInPlayList="http://"+DNS+":8080/PlayList/getPlayListByPlayListId";
+    private String pathGetSongById="http://"+ DNS +":8080/Song/getSongById";
+    private long waitTime=10;
+    private long secToOneMove=10;
     private List<SongVOGet> getInformationSongForPlayList(long playListId){
         PlayListVO playListVO=new PlayListVO();
         playListVO.setId(playListId);
@@ -158,7 +161,9 @@ public class Song {
         indexSongInPlayList--;
         stopSong();
         isNewSong=true;
-        setSong(getSong(listSongMain.get(indexSongInPlayList).getId()).getTheSong());
+        SongVOGet songVOGet=listSongMain.get(indexSongInPlayList);
+        String song=getSong(songVOGet.getId()).getTheSong();
+        setSong(song);
         playSong();
         return ErrorsEnum.GOOD;
     }
@@ -174,7 +179,32 @@ public class Song {
         loopPlayList=!loopPlayList;
     }
     public boolean isFinish(){
-        return clip.isRunning();
+        return !clip.isActive();
+    }
+    public void waiting(){
+        try {
+            Thread.sleep(waitTime);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+    public ErrorsEnum move(int PlusMinus){
+        if(PlusMinus!=-1 && PlusMinus!=1){
+            return ErrorsEnum.BAD_VAL;
+        }
+        long currentPosition = clip.getMicrosecondPosition();
+        clip.setMicrosecondPosition(currentPosition+PlusMinus*secToOneMove*1000000);
+        clip.start();
+        return ErrorsEnum.GOOD;
+    }
+    public ErrorsEnum showPropertySongPlay(){
+        SongVOGet song=listSongMain.get(indexSongInPlayList);
+        System.out.println("Name:  " +song.getNameSong() + "\nZaner:  " + song.getZaner());
+        int sec= (int) (clip.getMicrosecondLength()/1000000);
+        int min=sec/60;
+        sec%=60;
+        System.out.println("Length: "+min+":"+sec);
+        return ErrorsEnum.GOOD;
     }
     private void setSong(String song){
         byte[] byteArray = Base64.getDecoder().decode(song);
